@@ -14,8 +14,8 @@ export function ComicViewer() {
         fetch(`${URL}latest`)
             .then((res) => res.json())
             .then((data) => setLastComic(data));
-    },[])
-    
+    }, []);
+
     useEffect(() => {
         fetch(`${URL}${comicId}`)
             .then((res) => res.json())
@@ -24,13 +24,11 @@ export function ComicViewer() {
             });
     }, [comicId]);
 
-
-
     return (
-        <div className='comicviewer-container'>
-            <ComicImage actualComic={actualComic}/>
+        <div className="comicviewer-container">
+            <ComicImage actualComic={actualComic} />
             <ComicButtons lastComic={lastComic} actualComic={actualComic} setComicId={setComicId} />
-            <ComicRating actualComic={actualComic}/>
+            <ComicRating actualComic={actualComic} />
         </div>
     );
 }

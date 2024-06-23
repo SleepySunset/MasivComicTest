@@ -1,16 +1,24 @@
-.comicviewer-container{
+.comicviewer-container {
+    @include flex(flex, column, no-wrap, center, center);
     background-color: $primary-color;
-    width: 1200px;
-    height: 92%;
-    aspect-ratio: 12/6;
     border: 15px solid $secondary-color;
     border-radius: 10px;
-    -webkit-box-shadow: 7px 10px 38px -1px rgba(0,0,0,0.64);
-    -moz-box-shadow: 7px 10px 38px -1px rgba(0,0,0,0.64);
-    box-shadow: 7px 10px 38px -1px rgba(0,0,0,0.64);
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;   
+    -webkit-box-shadow: 7px 10px 38px -1px rgba(0, 0, 0, 0.64);
+    -moz-box-shadow: 7px 10px 38px -1px rgba(0, 0, 0, 0.64);
+    box-shadow: 7px 10px 38px -1px rgba(0, 0, 0, 0.64);
+    width: 100%;
+    padding: 1.2rem;
+    min-height: 550px;
+
+    @include media-up(sm) {
+        padding: 1.7rem;
+    }
+
+    @include media-up(lg) {
+        width: 90%;
+    }
+
+    @include media-up(xl) {
+        width: 95%;
+    }
 }

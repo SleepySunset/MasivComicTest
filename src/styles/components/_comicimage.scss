@@ -1,19 +1,30 @@
-.comicimage_container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1000px;
-    
-    h1{
+.comicimage_container {
+    @include flex(flex, column, no-wrap, center, center);
+    max-width: 250px;
+
+    @include media-up(sm) {
+        max-width: 90%;
+    }
+
+    @include media-up(lg) {
+        max-width: 95%;
+    }
+
+    h1 {
         font-family: $primary-font;
+        font-size: 1.7rem;
         padding: 1rem;
         color: $secondary-color;
+        text-align: center;
+        line-height: 2.2rem;
+
+        @include media-up(md) {
+            font-size: 2.2rem;
+            line-height: 3.2rem;
+        }
     }
 
-    img{
-       max-width: 600px;
-       max-height: 320px;
-       border: 2px solid $secondary-color inherit;
+    img {
+        border: 2px solid $secondary-color;
     }
 }
-
