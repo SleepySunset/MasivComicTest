@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 
 import { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
-import './ComicRating.css';
 
 export function ComicRating( {actualComic} ) {
     const [rating, setRating] = useState(null);
@@ -14,7 +13,7 @@ export function ComicRating( {actualComic} ) {
 
 
     return (
-        <div>
+        <div className='comicrating_container'>
             {[...Array(5)].map((star, index) => {
                 const currentRating = index + 1;
                 return (
@@ -28,14 +27,14 @@ export function ComicRating( {actualComic} ) {
                         <FaStar
                             className="star"
                             size={40}
-                            color={currentRating <= (hover || rating) ? '#ffc107' : '#e4e5e9'}
+                            color={currentRating <= (hover || rating) ? '#323030' : '#e9e9e9'}
                             onMouseEnter={() => setHover(currentRating)}
                             onMouseLeave={() => setHover(null)}
                         />
                     </label>
                 );
             })}
-            <p>Tu calificación es de {rating}</p>
+            {rating && <p>Tu calificación es de {rating}</p>}
         </div>
     );
 }

@@ -1,0 +1,16 @@
+.comicviewer-container{
+    background-color: $primary-color;
+    width: 1200px;
+    height: 92%;
+    aspect-ratio: 12/6;
+    border: 15px solid $secondary-color;
+    border-radius: 10px;
+    -webkit-box-shadow: 7px 10px 38px -1px rgba(0,0,0,0.64);
+    -moz-box-shadow: 7px 10px 38px -1px rgba(0,0,0,0.64);
+    box-shadow: 7px 10px 38px -1px rgba(0,0,0,0.64);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}

@@ -27,10 +27,10 @@ export function ComicViewer() {
 
 
     return (
-        <>
+        <div className='comicviewer-container'>
             <ComicImage actualComic={actualComic}/>
             <ComicButtons lastComic={lastComic} actualComic={actualComic} setComicId={setComicId} />
             <ComicRating actualComic={actualComic}/>
-        </>
+        </div>
     );
 }

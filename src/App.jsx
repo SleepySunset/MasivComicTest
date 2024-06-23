@@ -1,7 +1,12 @@
 import { ComicViewer } from "./components/ComicViewer";
 
 function App (){
-  return <ComicViewer/>
+  return (
+    <div className="container">
+      <ComicViewer/>
+    </div>
+    
+  )
 }
 
 export default App;

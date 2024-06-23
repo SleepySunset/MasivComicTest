@@ -13,11 +13,13 @@ export function ComicButtons({ actualComic, lastComic, setComicId }) {
     };
 
     return (
-        <div>
+        <div className='comicbutton_container'>
             <button onClick={prevComic} disabled={actualComic.num === 1}>
                 Prev
             </button>
-            <button onClick={randomComic}>Random</button>
+            <button onClick={randomComic}>
+                Random
+            </button>
             <button onClick={nextComic} disabled={actualComic.num === lastComic.num}>
                 Next
             </button>

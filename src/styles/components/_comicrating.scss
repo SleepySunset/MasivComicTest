@@ -1,0 +1,24 @@
+.comicrating_container{
+    display: flex;
+    padding: 0.6rem;
+    align-items: center;
+    width: 300px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    input[type='radio'] {
+        display: none;
+    }
+
+    .star:hover {
+        cursor: pointer;
+    }
+    
+    p{
+        font-family: $secondary-font;
+        padding: 1rem;
+    }
+
+}
+
+
